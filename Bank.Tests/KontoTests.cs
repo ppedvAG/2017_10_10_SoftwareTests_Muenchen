@@ -160,10 +160,6 @@ namespace Bank.Tests
                 System.Fakes.ShimDateTime.NowGet = () => new DateTime(2017, 8, 12);
                 output.WriteLine($"Sould be Saturday. Is: {DateTime.Now.DayOfWeek}");
                 Assert.Throws<InvalidOperationException>(() => konto.Abheben(5));
-                // Sunday
-                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2017, 10, 8);
-                output.WriteLine($"Sould be Sunday. Is: {DateTime.Now.DayOfWeek}");
-                Assert.Throws<InvalidOperationException>(() => konto.Abheben(5));
             }
         }
         [Fact]
