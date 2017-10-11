@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Pazifiksegler.WebApi.App_Start;
 using System.Web.Http;
 
 namespace Pazifiksegler.WebApi
@@ -10,6 +8,7 @@ namespace Pazifiksegler.WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            StructuremapWebApi.Start();
 
             // Web API routes
             config.MapHttpAttributeRoutes();

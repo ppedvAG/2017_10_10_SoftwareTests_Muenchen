@@ -7,6 +7,9 @@ namespace Pazifiksegler.Data.Repositories
 {
     public class SampleCustomerRepository : ICustomerRepository
     {
+        public void Add(Customer customer)
+        { /* no need to save in SampleRepository */ }
+
         public IEnumerable<Customer> GetAll() 
         {
             var customerFiller = new Filler<Customer>();
